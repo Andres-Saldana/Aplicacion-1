@@ -45,9 +45,16 @@ def rectangle(start, end):
     down()
     begin_fill()
 
-    for count in range(4):
-        forward(end.x - start.x)
-        left(90)
+    forward(end.x - start.x)
+    left(90)
+    forward(end.x - start.x)
+    forward(end.x - start.x)
+    left(90)
+    forward(end.x - start.x)
+    left(90)
+    forward(end.x - start.x)
+    forward(end.x - start.x)
+    left(90)
 
     end_fill()
     
@@ -55,6 +62,7 @@ def rectangle(start, end):
 
 # este es el comentario de Andres
 # este es el comentario de Edgar
+
 def triangle(start, end):
     "Draw triangle from start to end."
     pass  # TODO
