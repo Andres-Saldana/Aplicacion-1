@@ -39,7 +39,10 @@ def circle(start, end):
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
+
     pass  # TODO
+
+# este es el comentario de Andres
 
 def triangle(start, end):
     "Draw triangle from start to end."
