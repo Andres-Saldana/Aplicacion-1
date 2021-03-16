@@ -43,7 +43,7 @@ def rectangle(start, end):
     pass  # TODO
 
 # este es el comentario de Andres
-
+# este es el comentario de Edgar
 def triangle(start, end):
     "Draw triangle from start to end."
     pass  # TODO
