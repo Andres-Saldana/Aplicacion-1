@@ -13,7 +13,6 @@ Exercises
 
 from turtle import *
 from freegames import vector
-import turtle
 def line(start, end):
     "Draw line from start to end."
     up()
@@ -44,16 +43,16 @@ def rectangle(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
-<<<<<<< HEAD
+#<<<<<<< HEAD
     
-=======
+#=======
 
     # aqui vamos a dibujar un rectangulo asi que 2 de sus lados deben ser mas grandes que los otros 2
 
     forward(end.x - start.x) #dibujamos el primer lado
     left(90) #damos un giro de 90 grados
     forward(end.x - start.x) #recorremos el doble para dibujar otro lado
->>>>>>> 4d548f29d36927ea96074750b991d30c6dd908a3
+#>>>>>>> 4d548f29d36927ea96074750b991d30c6dd908a3
     forward(end.x - start.x)
     left(90) # otro giro de 90
     forward(end.x - start.x) # se repite el proceso para terminar el rectangulo
@@ -69,27 +68,28 @@ def rectangle(start, end):
 # este es el comentario de Andres
 # este es el comentario de Edgar
 
-def triangle(start, end):
+def triangle(x, y):
     "Draw triangle from start to end."
     import turtle
+    raya=turtle.Turtle() #objeto
+    raya.begin_fill()
     
-    raya=turtle.Turtle()
-    
-    def triangulo(x,y):
+    def triangulo(x,y): #Funcion para el trazo
+
         raya.penup()
         raya.goto(x, y)
         raya.pendown()
-        
-        for i in range(3):
-            raya.forward(100)
-            raya.left(120)
-            raya.forward(100)
+
+        for i in range(3): #realiza el trazo
+            raya.forward(100) #distancia en x
+            raya.left(120) #angulos que gira (120°)
+            raya.forward(100) # continúa el trazo
+            #se repite para terminar el triángulo
     
-        
-        
-    turtle.onscreenclick(triangulo,1)
+    turtle.onscreenclick(triangulo,1) #que de un trazo lo realize
     turtle.listen()
-    turtle.done()
+    raya.end_fill()
+    turtle.done() #mantener el trazo
     
     pass  # TODO
 
