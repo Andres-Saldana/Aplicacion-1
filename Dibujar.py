@@ -1,3 +1,4 @@
+
 """Paint, for drawing shapes.
 
 Exercises
@@ -12,7 +13,7 @@ Exercises
 
 from turtle import *
 from freegames import vector
-
+import turtle
 def line(start, end):
     "Draw line from start to end."
     up()
@@ -39,12 +40,11 @@ def circle(start, end):
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
-    
     up()
     goto(start.x, start.y)
     down()
     begin_fill()
-
+    
     forward(end.x - start.x)
     left(90)
     forward(end.x - start.x)
@@ -55,7 +55,7 @@ def rectangle(start, end):
     forward(end.x - start.x)
     forward(end.x - start.x)
     left(90)
-
+    
     end_fill()
     
     pass  # TODO
@@ -65,6 +65,26 @@ def rectangle(start, end):
 
 def triangle(start, end):
     "Draw triangle from start to end."
+    import turtle
+    
+    raya=turtle.Turtle()
+    
+    def triangulo(x,y):
+        raya.penup()
+        raya.goto(x, y)
+        raya.pendown()
+        
+        for i in range(3):
+            raya.forward(100)
+            raya.left(120)
+            raya.forward(100)
+    
+        
+        
+    turtle.onscreenclick(triangulo,1)
+    turtle.listen()
+    turtle.done()
+    
     pass  # TODO
 
 def tap(x, y):
