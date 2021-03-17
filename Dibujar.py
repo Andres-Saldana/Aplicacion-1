@@ -68,28 +68,21 @@ def rectangle(start, end):
 # este es el comentario de Andres
 # este es el comentario de Edgar
 
-def triangle(x, y):
+def triangle(start, end):
     "Draw triangle from start to end."
-    import turtle
-    raya=turtle.Turtle() #objeto
-    raya.begin_fill()
-    
-    def triangulo(x,y): #Funcion para el trazo
+    #def triangulo(x,y): #Funcion para el trazo
 
-        raya.penup()
-        raya.goto(x, y)
-        raya.pendown()
-
-        for i in range(3): #realiza el trazo
-            raya.forward(100) #distancia en x
-            raya.left(120) #angulos que gira (120°)
-            raya.forward(100) # continúa el trazo
-            #se repite para terminar el triángulo
+    up()
+    goto(start.x, start.y)
+    down()
+    begin_fill()
     
-    turtle.onscreenclick(triangulo,1) #que de un trazo lo realize
-    turtle.listen()
-    raya.end_fill()
-    turtle.done() #mantener el trazo
+    for i in range(3): #realiza el trazo
+        forward(end.x - start.x) #distancia cualquiera
+        left(120) #angulos que gira (120°)
+        forward(end.x - start.x) # continúa el trazo
+        #se repite para terminar el triángulo
+    end_fill()
     
     pass  # TODO
 
