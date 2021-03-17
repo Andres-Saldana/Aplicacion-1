@@ -39,8 +39,8 @@ def circle(start, end):
     goto(start.x, start.y)
     down()
     begin_fill()
-    t.circle(end.x - start.y)
-    pass  # TODO
+    t.circle(end.x - start.y) #realiza el circulo
+    pass  
 
 
 
