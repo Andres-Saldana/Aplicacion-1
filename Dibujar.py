@@ -13,6 +13,8 @@ Exercises
 
 from turtle import *
 from freegames import vector
+t=Turtle()
+
 def line(start, end):
     "Draw line from start to end."
     up()
@@ -35,6 +37,7 @@ def square(start, end):
 
 def circle(start, end):
     "Draw circle from start to end."
+    t.circle(end.x - start.x)
     pass  # TODO
 
 def rectangle(start, end):
@@ -52,7 +55,6 @@ def rectangle(start, end):
     forward(end.x - start.x) #dibujamos el primer lado
     left(90) #damos un giro de 90 grados
     forward(end.x - start.x) #recorremos el doble para dibujar otro lado
-#>>>>>>> 4d548f29d36927ea96074750b991d30c6dd908a3
     forward(end.x - start.x)
     left(90) # otro giro de 90
     forward(end.x - start.x) # se repite el proceso para terminar el rectangulo
