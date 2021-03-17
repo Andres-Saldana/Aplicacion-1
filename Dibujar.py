@@ -24,7 +24,6 @@ def line(start, end):
 
 def square(start, end):
     "Draw square from start to end."
-    up()
     goto(start.x, start.y)
     down()
     begin_fill()
@@ -36,9 +35,14 @@ def square(start, end):
     end_fill()
 
 def circle(start, end):
-    "Draw circle from start to end."
-    t.circle(end.x - start.x)
+    "Draw circle from start to end"
+    goto(start.x, start.y)
+    down()
+    begin_fill()
+    t.circle(end.x - start.y)
     pass  # TODO
+
+
 
 def rectangle(start, end):
     "Draw rectangle from start to end."
@@ -55,6 +59,9 @@ def rectangle(start, end):
     forward(end.x - start.x) #dibujamos el primer lado
     left(90) #damos un giro de 90 grados
     forward(end.x - start.x) #recorremos el doble para dibujar otro lado
+
+#>>>>>>> 4d548f29d36927ea96074750b991d30c6dd908a3
+
     forward(end.x - start.x)
     left(90) # otro giro de 90
     forward(end.x - start.x) # se repite el proceso para terminar el rectangulo
